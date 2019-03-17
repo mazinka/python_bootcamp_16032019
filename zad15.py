@@ -34,6 +34,10 @@ while True:
         print('jestes gamon, skarb zmienil polozenie')
 
     odleglosc_po_ruchu = abs(skarb_x - gracz_x) + abs(skarb_y - gracz_y)
+
+    if randint(1, 5)!=5:
+        [rint(f"twoja pozycja to")]
+
     if gracz_x < 1 or gracz_x > 10 or gracz_y < 1 or gracz_y > 10:
         print("wyszedłeś poza plansze")
         break

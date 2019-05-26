@@ -1,0 +1,22 @@
+    
+{% extends "base.html" %}
+
+{% block title %}Lista książek{% endblock %}
+
+{% block content %}
+    <h1>Lista dostępnych książek</h1>
+    <div>
+        {{ ksiazki }}<br>
+        {% for k in ksiazki %}
+        <p>{{ k.title }}</p>
+        {% endfor %}
+
+    </div>
+    {% for k in ksiazki %}
+        <div class="row">
+            <div class="col-md-2"><a href="/books/{{ k.id }}"><img src="https://via.placeholder.com/150"></a></div>
+            <div class="col-md-1"></div>
+            <div class=""><h3>{{ k.title }}</h3></div>
+        </div>
+    {% endfor %}
+{% endblock %}
